@@ -1,7 +1,6 @@
+#class for operating an airplane 
 class Airplane
-
   @@all = []
-
   def initialize
     @location = 'ground'
     @@all << self
@@ -13,7 +12,7 @@ class Airplane
   end
 
   def land
-    @location = "ground"
+    @location = 'ground'
   end
 
   def self.all
@@ -24,19 +23,18 @@ class Airplane
     [
       mila: 'vegetarian',
       paul: 'chicken',
-       egon: 'chicken',
+      egon: 'chicken',
       sama: 'chicken'
     ]
   end
 
   def self.ground_all
     @@all.each do |airplane|
-      airplane.land
-      end
+    airplane.land
+    end
   end
 
-  def self.get_planes_for_ten_airports
+  def self.planes_for_ten_airports
     10 * @@all.size
   end
-
 end
